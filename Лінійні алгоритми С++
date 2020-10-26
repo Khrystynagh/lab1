@@ -1,0 +1,39 @@
+// Лабораторна 1 на С++.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+//Знайти(в радіанах і градусах) всі кути трикутника зі сторонами а, b, c.
+
+#include <iostream>
+#include <iomanip>
+#define _USE_MATH_DEFINES
+#include <cmath>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	float a, b, c; //Вводим значення сторін a, b, c.
+	cout << "Введіть а:"; cin >> a;
+	cout << "Введіть b:"; cin >> b;
+	cout << "Введіть c:"; cin >> c;
+
+	float cosA = (b * b + c * c - a * a) / (2 * b * c); //Обчислюємо косинуси кутів трикутника.
+	float cosB = (a * a + c * c - b * b) / (2 * a * c);
+	float cosC = (a * a + b * b - c * c) / (2 * a * b);
+
+	float radiansA = acos(cosA); //Обчислимо радіанну міру кутів.
+	float radiansB = acos(cosB);
+	float radiansC = acos(cosC);
+
+	double pi = 3.1415926535;
+	float degreesA = radiansA * (180 / pi); //Обчислимо градусну міру кутів.
+	float degreesB = radiansA * (180 / pi);
+	float degreesC = radiansA * (180 / pi);
+	cout << "Градусна міра кутів :" << degreesA << degreesB << degreesC; //Виводимо градусну і радіанну міру кутів трикутника.
+	cout << "Радіанна міра кутів :" << radiansA << radiansB << radiansC;
+
+	cin.get();
+	
+		
+}
+
+
