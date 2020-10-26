@@ -1,0 +1,24 @@
+#Лабораторна 1(Грицюк Христини ІП-01)
+
+#Знайти (в радіанах і градусах) всі кути трикутника зі сторонами а,b,c.
+#Вводим значення сторін a,b,c.
+import math
+a=float(input("Введіть а:")) 
+b=float(input("Введіть b:"))
+c=float(input("Введіть с:"))
+#Обчислюємо косинуси кутів трикутника.
+cosA=(b**2+c**2-a**2)/(2*b*c) 
+cosB=(a**2+c**2-b**2)/(2*a*c)
+cosC=(a**2+b**2-c**2)/(2*a*b)
+#Обчислимо радіанну міру кутів.
+radiansA=math.acos(cosA)                                                     
+radiansB=math.acos(cosB)
+radiansC=math.acos(cosC)
+#Обчислимо градусну міру кутів.
+degreesA=math.degrees(radiansA) 
+degreesB=math.degrees(radiansB)
+degreesC=math.degrees(radiansC)
+#Виводимо градусну і радіанну міру кутів трикутника.
+print("Кути в градусах :", degreesA , degreesB , degreesC ) 
+print("Кути в радіанах :", radiansA , radiansB , radiansC )
+
